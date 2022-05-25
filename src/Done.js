@@ -6,12 +6,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Done = ({ inProgressList, setInProgressList, doneList, setDoneList }) => {
 
+    // function to delete item from list
     const delet = (index) => {
         const listTask = [...doneList];
         listTask.splice(index, 1);
         setDoneList(listTask);
     }
 
+    // function to move item from done to inprogress
     const toInProgressList = (index) => {
         const listTask = [...doneList];
         const listInProgress = [...inProgressList];

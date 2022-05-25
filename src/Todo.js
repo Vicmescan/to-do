@@ -8,11 +8,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Lists = ({ todoList, setTodoList, inProgressList, setInProgressList }) => {
 
+  // function to delete item from list
   const delet = (index) => {
     const listTask = [...todoList];
     listTask.splice(index, 1);
     setTodoList(listTask);
   }
+
+  // function to move item from todo to inprogress
   const toInProgressList = (index) => {
     const listTask = [...todoList];
     const listInProgress = [...inProgressList];

@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const InProgress = ({ todoList, setTodoList, inProgressList, setInProgressList, doneList, setDoneList }) => {
 
-
+    // function to move item from inprogress to todo
     const toTodoList = (index) => {
         const listTask = [...inProgressList];
         const listDone = [...todoList];
@@ -15,6 +15,7 @@ const InProgress = ({ todoList, setTodoList, inProgressList, setInProgressList, 
         setTodoList(listDone);
     }
 
+    // function to move item from inprogress to done
     const toDoneList = (index) => {
         const listTask = [...inProgressList];
         const listDone = [...doneList];
