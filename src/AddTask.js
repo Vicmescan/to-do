@@ -8,7 +8,7 @@ const AddTask = (props) => {
 
     // add a task to the todo list when the user clicks on the button
     const buttonClick = (e) => {
-        if (input > 0) {
+        if (input.length > 0) {
         e.preventDefault();
         props.setTodoList(oldArr => [...oldArr, input])
         setInput("");
